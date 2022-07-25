@@ -1,6 +1,30 @@
 [
     {
-        "title":"Test Title",
-        "text":"Test text"
+        "title": "Test Title",
+        "text": "Test text"
+    },
+    {
+        "newNote": 0,
+        "note_id": "0f22a2b7-0abb-4a13-ac48-bf0f44ae4c6a"
+    },
+    {
+        "newNote": 0,
+        "note_id": "951e21e0-3b21-479a-9476-67ffc82b3ea2"
+    },
+    {
+        "newNote": 0,
+        "note_id": "16bcb0c2-9c13-481d-a453-753feacbd9f0"
+    },
+    {
+        "newNote": 0,
+        "note_id": "3a509138-9c17-464d-a976-fb5536628fa6"
+    },
+    {
+        "newNote": 0,
+        "note_id": "d1cb6152-b8c4-4328-83ea-55eee16afe18"
+    },
+    {
+        "newNote": 0,
+        "note_id": "602a494d-49a1-4abb-b0ad-b058796d31c1"
     }
 ]
