@@ -24,13 +24,13 @@ app.get('/', (req, res) =>
 // // GET Route for notes page
 app.get('/notes', (req, res) =>
   res.sendFile(path.join(__dirname, '/public/notes.html'))
- 
+
 );
 app.post('/notes', (req, res) => {
   var newNote = req.body;
   newNote.id = uuidv4();
   noteData.push(newNote);
-  writeFile('./db/db.json' ,  JSON.stringify(noteData, null, 4), (err) => {
+  writeFile('./db/db.json', JSON.stringify(noteData, null, 4), (err) => {
     err ? console.log(err) : res.send(newNote)
   })
 });
