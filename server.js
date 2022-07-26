@@ -3,10 +3,11 @@ const express = require('express');
 const { fstat, writeFile } = require('fs');
 const path = require('path');
 const api = require('./routes/index.js');
+const { v4: uuidv4 } = require('uuid');
 
 const PORT = 3001;
 const app = express();
-
+var noteData = require('./db/db.json')
 
 //connecting middleware static assets
 app.use(express.static('public'));
@@ -25,11 +26,10 @@ app.get('/notes', (req, res) =>
  
 );
 app.post('/notes', (req, res) => {
-  console.log("test post");
   var newNote = req.body;
-  newNote.id = uniqid();
+  newNote.id = uuidv4();
   noteData.push(newNote);
-  fs,writeFile('./db/db.json' ,  JSON.stringify(noteData, null, 4), (err) => {
+  writeFile('./db/db.json' ,  JSON.stringify(noteData, null, 4), (err) => {
     err ? console.log(err) : res.send(newNote)
   })
 });
